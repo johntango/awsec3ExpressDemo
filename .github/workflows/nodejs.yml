@@ -18,6 +18,12 @@ jobs:
         with:
           fetch-depth: 1
 
+      - name: Echo
+        run: echo ${{ secrets.AWS_ACCESS_KEY_ID }}
+
+      - name: Echo 2
+        run: echo ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+
       - name: Deploy
         uses: udondan/cdk-nodejs@v0.3.1
         with:
